@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.idea": true,
+    ".nyc-output": true,
+    "**/.vscode": true,
+    "coverage": true,
+    "node_modules/**": true
+  }
+}

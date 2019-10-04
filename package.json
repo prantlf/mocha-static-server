@@ -1,0 +1,57 @@
+{
+  "name": "mocha-static-server",
+  "description": "Starts a web server for local static assets to use with the Mocha test runner.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/prantlf/mocha-static-server",
+  "author": {
+    "name": "Ferdinand Prantl",
+    "email": "prantlf@gmail.com",
+    "url": "http://prantl.tk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/mocha-static-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prantlf/mocha-static-server/issues"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/prantlf/mocha-static-server/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "main": "src",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "standard --fix --verbose src/*.js test/*.js",
+    "check": "nyc --reporter=lcov --reporter=text mocha --require .",
+    "test": "npm run lint && npm run check"
+  },
+  "nyc": {
+    "exclude": [
+      "test"
+    ]
+  },
+  "dependencies": {
+    "mime": "2.4.4",
+    "mocha-prepare": "0.1.0"
+  },
+  "devDependencies": {
+    "coveralls": "3.0.6",
+    "mocha": "6.2.1",
+    "nyc": "14.1.1",
+    "request": "2.88.0",
+    "standard": "14.3.1"
+  },
+  "keywords": [
+    "mocha",
+    "server"
+  ]
+}
